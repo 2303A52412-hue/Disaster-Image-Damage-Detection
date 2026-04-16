@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Disaster Damage Detection</title>
+</head>
+
+<body style="text-align:center; font-family:Arial">
+
+    <h2>Disaster Damage Detection Web App</h2>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Detect Damage</button>
+    </form>
+
+    {% if result_image %}
+    <h3>Detected Damaged Areas</h3>
+    <img src="{{ result_image }}" width="800"> {% endif %}
+
+</body>
+
+</html>
